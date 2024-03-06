@@ -1,0 +1,243 @@
+:root{
+    --color-primary : #243D42;
+    --color-text: #111C22 ;
+    --color-third: #CDC57F;
+    --font-main: roboto-bold;
+    --font-text: roboto-regular;
+}
+
+/* Main Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+    color: var(--color-text);
+}
+
+@font-face {
+    font-family: Roboto-bold;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+
+
+.title {
+    color: var(--color-primary);
+    font-family: var(--font-text);
+}
+
+/* End Main Settings */
+
+/* Layouts Settings */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background-color: var(--color-primary);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: azure;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    padding: 10px;
+    border: 1px solid azure; /* Añade un borde al botón */
+    border-radius: 5px; /* Añade esquinas redondeadas */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 15px;
+}
+
+nav ul li a:hover {
+    background-color: azure; /* Cambia el fondo al hacer hover */
+    color: var(--color-text); /* Cambia el color del texto al hacer hover */
+}
+
+main {
+    position: relative;
+    min-height: 100vh; /* Asegura que el main ocupe al menos el alto de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color-third);
+    margin: 0 auto; /* Centra los elementos horizontalmente */
+    padding: 30px; /* Ajusta el espaciado interno según tus necesidades */
+}
+
+
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid var(--color-primary);
+    width: 50%;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.list li {
+    padding: 15px;
+    width: 100%;
+    border: 1.5px solid var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    padding:  5px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-view:hover {
+    background-color: whitesmoke;
+    color: var(--color-primary);
+    border: 1.5px solid var(--color-primary);
+}
+
+.btn-view {
+    background-color: var(--color-primary);
+    color: whitesmoke;
+    border-radius: 5px;
+    border: 1.5px solid var(--color-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: whitesmoke;
+    color: goldenrod;
+    border: 1px solid  goldenrod;
+}
+
+.btn-edit {
+    background-color: goldenrod;
+    color: whitesmoke;
+    border-radius: 5px;
+    border: 1px solid  goldenrod;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: whitesmoke;
+    color:  #b82f2f;
+    border: 1px solid #b82f2f;
+}
+
+.btn-delete {
+    background-color: #b82f2f;
+    color: whitesmoke;
+    border-radius: 5px;
+    border: 1px solid #b82f2f;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search {
+    margin: 20px;
+    width: 50%;
+}
+
+.search-bar {
+    padding: 5px;
+    width: 80%;
+    border-radius: 5px;
+    border: 2px solid var(--color-text);
+    background-color: #B8B3AD;
+
+}
+
+.btn-search {
+    width: 19%;
+    background-color: var(--color-primary);
+    color: whitesmoke;
+    border-radius: 5px;
+    border: 1.5px solid var(--color-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-search:hover {
+    background-color: whitesmoke;
+    color: var(--color-primary);
+}
+
+/* Estilos para los botones */
+.aux-btns {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.aux-btns a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: whitesmoke;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.aux-btns a:hover {
+    background-color: whitesmoke;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+
+.alert-success{ 
+    width: 100%;
+    padding: 10px;
+    background-color: seagreen;
+    color: azure;
+}
+
+/* End Layouts Settings */
+
+/* Index Settings */
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    margin: 20px;
+    background-color: var(--color-primary);
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+    background-color: var(--color-text);
+    color: var(--color-third);
+}
+
+/* End Index Settings */
+

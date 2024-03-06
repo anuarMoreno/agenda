@@ -1,0 +1,30 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %}Task Page{% endblock %}
+
+{% block 'content' %}
+<h2 class="title">TASKS</h2>
+<form action="{% url 'task' %}" method="GET" class="search">
+    <input type="text" name="search" class="search-bar" placeholder="Search tasks ...">
+    <input type="submit" value="Search" class="btn btn-search">
+</form>
+<span class="aux-btns">
+    <a href="{% url "task" %}">All</a> 
+    <a href="{% url "task_create" %}">Add</a>
+</span>
+<ul class="list">
+    {% for task in tasks %}
+    <li>{{ task }}
+        <span>
+            <a href="{% url "task_view" id=task.id %}" class="btn btn-view">View</a>
+            <a href="{% url "task_edit" id=task.id %}" class="btn btn-edit">Edit</a>
+            <a href="{% url "task_delete" id=task.id %}" class="btn btn-delete">Delete</a> 
+        </span>
+    </li>
+
+    {% endfor %}
+ 
+
+</ul>
+
+{% endblock  %}

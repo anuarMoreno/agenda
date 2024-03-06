@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %}Home Page{% endblock %}
+
+{% block 'content' %}
+    
+    <h1 class="title">YOUR PLANNER</h1>
+    <div class="cards">
+        <a href="{% url "contact"  %}" class="card">CONTACTS</a>
+        <a href="{% url "task" %}" class="card">TASKS</a>
+    </div>
+
+{% endblock  %}
+

@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %}Task {{ task.title }}{% endblock %}
+
+{% block 'content' %}
+
+<span class="aux-btns">
+    <a href="{% url "task" %}">Go Back</a>
+</span>
+<ul class="list">
+ 
+    <li><b>Title:</b> {{ task.title }}</li>
+    <li><b>Description:</b> {{ task.description }}</li>
+    <li><b>Date:</b> {{ task.task_date }}</li>
+    <li><b>Deadline</b> {{ task.due_date }}</li>
+    <li><b>Priority 1-5 :</b> {{ task.priority }}</li>
+
+
+</ul>
+
+{% endblock  %}

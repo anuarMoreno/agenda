@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %}New Task{% endblock %}
+
+{% block 'styles' %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock  %}
+
+{% block 'content' %}
+
+   <span class="aux-btns">
+        <a href="{% url "task" %}">Go Back</a>
+    </span>
+    <form action="{% url "task_create" %}" method="POST">
+        {% csrf_token %}
+        <table class="table">
+            {{form.as_table}}
+        </table>
+        <div class="btn-wrapper">
+            <input type="submit" value="Save" class="btn-save">
+        </div>
+    </form>
+
+{% endblock  %}
